@@ -5,8 +5,8 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class CountryService {
-  URL = "https://restcountries.eu/rest/v2";
-  countries = [];
+  URL = "https://restcountries.com/v2/";
+  allCountries = [];
 
   constructor(private httpClient: HttpClient) {}
 
@@ -14,12 +14,25 @@ export class CountryService {
     return this.httpClient.get(`${this.URL}/all`);
   }
 
-  getCountryByPartialName(countryName: string) {
+  getCountryByPartialName(countryName: string): any {
     return this.httpClient.get(`${this.URL}/name/${countryName}`);
   }
   
-  getCountryByFullName(countryName: string) {
+  getCountryByFullName(countryName: string): any {
     return this.httpClient.get(`${this.URL}/name/${countryName}?fullText=true`);
   }
 
+  getCountryByRegion(countryRegion: string): any {
+    return this.httpClient.get(`${URL}/region/${countryRegion}`);
+  }
+
+  getCountriesByPage(page: number): any {
+    this.getAllCountries()
+      .subscribe((countries: any) => {
+        this.allCountries = countries;
+      })
+
+    console.log(this.allCountries);
+    
+  }
 }

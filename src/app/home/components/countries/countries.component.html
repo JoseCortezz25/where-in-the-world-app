@@ -1,5 +1,30 @@
-<div class="feed-container" >
+<div 
+  class="feed-container" 
+  infiniteScroll
+  (scrolled)="onScrollDown()"
+  >
+  <div class="form-group">
+    <input type="search" id="search" placeholder="Search for a country..."  [(ngModel)]="searchText">
+  </div>
+
+  <div class="filter-group">
+    <select name="select" [formControl]="selectOpcion">
+      <option selected disabled hidden value="">Filter by Region</option>
+      <option 
+        [value]="region" 
+        *ngFor="let region of listOfRegion"
+        >{{region}}</option>
+    </select>
+  </div>
+
   <app-country 
-    *ngFor="let country of allCountries" 
+    *ngFor="let country of allCountriesShow | filterSearch: searchText " 
     [country]=country></app-country>
-</div>
+
+  </div>
+
+  <!-- <button 
+    *ngIf="showButtonUp" 
+    class="btn-up"
+    (click)="onScrollTop()"
+    >UP</button> -->

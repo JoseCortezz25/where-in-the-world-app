@@ -1,12 +1,18 @@
 <header>
   <nav>
-    <div class="logo">
-      <img src="../../../../assets/icons/CSW-light.svg" alt="logo de countries wiki">
-    </div>
+    <a class="logo" routerLink="/">
+      <strong>Where in the world?</strong>
+    </a>
   </nav>
   <nav>
     <div class="theme-button">
-      dark mode xd
+
+      <button class="toggle" (click)="switchTheme()">
+        {{ theme === "light-theme" ? "🌙  Dark Mode" : "🌞  Light Mode" }}
+      </button>
+
+      
+
     </div>
   </nav>
 </header>

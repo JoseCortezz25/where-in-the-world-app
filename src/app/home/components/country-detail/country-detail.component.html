@@ -1,0 +1,33 @@
+<section class="country-detail">
+  
+  <div class="country-detail__section">
+    <img [src]="country?.flag" alt="">
+  </div>
+
+  <div class="country-detail__section">
+    <p class="country-detail__title">{{country?.name}} <strong class="alpha3Code"> - {{country?.alpha3Code}}</strong></p>
+    <p class="country-detail__subtitle border">{{country?.region}} - {{country?.subregion}}</p>
+
+    <div class="country-information">
+      <strong>Prefijo telefónico:</strong>
+      <p>+ {{country?.callingCodes[0]}}</p>
+      <strong>Bloque regional:</strong>
+      <p>{{country?.regionalBlocs[0].name}}</p>
+      <strong>Capital:</strong>
+      <p>{{country?.capital}}</p>
+      <strong>Población:</strong>
+      <p> {{country?.population | number: "1.0-0"}}</p>
+      <strong>Zona horaria:</strong>
+      <p>{{country?.timezones}}</p>
+      <strong>Spellings:</strong> 
+      <p class="">{{country?.altSpellings}}</p>
+      <strong>Moneda:</strong>
+      <p>{{currencies}}</p>
+      <strong>Idioma:</strong>
+      <p>{{country?.languages[0].name}}</p>
+      <strong>Idioma nativo:</strong>
+      <p>{{country?.languages[0].nativeName}}</p>
+    </div>
+  </div>
+
+</section>

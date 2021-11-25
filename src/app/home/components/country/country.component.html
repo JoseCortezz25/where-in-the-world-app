@@ -1,6 +1,18 @@
-<div class="box-country">
-  <p class="name-country">{{country.name}}</p>
-  <p>Population: {{country.population  }}</p>
-  <p>Capital: {{country.capital}}</p>
-  <p>Region: {{country.region}}</p>
-</div>
+<a class="box-country-link" routerLink="/country/{{country.name}}">
+  <div class="box-country">
+  
+      <img 
+        class="flag-country"
+        [src]="country.flag" 
+        alt="A country flag. Visual representation of the country" 
+        loading="lazy">
+  
+    <div class="description-country">
+      <p class="name-country">{{country.name | uppercase}}</p>
+      <p>Population: {{country.population | number: "1.0-0"}}</p>
+      <p>Capital: {{country.capital}}</p>
+      <p>Region: {{country.region}}</p>
+      <p>Subregion: {{country.subregion}}</p>
+    </div>
+  </div>
+</a> 

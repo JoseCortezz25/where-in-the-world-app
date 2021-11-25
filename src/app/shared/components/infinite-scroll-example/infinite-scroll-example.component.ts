@@ -41,7 +41,7 @@ export class InfiniteScrollExampleComponent implements OnInit {
       this.add40lines();
       this.actualPage++;
     } else {
-      console.log('No more lines. Finish page!');
+      // console.log('No more lines. Finish page!');
     }
   }
 

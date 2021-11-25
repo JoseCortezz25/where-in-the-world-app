@@ -12,7 +12,5 @@ export class CountryComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.country);
-    
   }
 }

@@ -20,9 +20,6 @@ export class FilterPipe implements PipeTransform {
     if (!searchText) {
       return countries;
     }
-
-    console.log("countries");
-    console.log(countries);
     
     searchText = searchText.toLocaleLowerCase();
 

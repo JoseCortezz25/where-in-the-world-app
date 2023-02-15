@@ -2,6 +2,10 @@
 
 Esta aplicación permite a los usuarios visualizar información detallada de los países del mundo, incluyendo la población, bandera, capital, idioma, moneda y más. Con un buscador interactivo, los usuarios pueden buscar y seleccionar un país específico para ver su información detallada. A su vez, cuenta con modo claro y oscuro en su interfaz. La aplicación fue desarrollada utilizando Angular, hace uso de la API proveída por REST Countries y cuenta con un diseño responsive adaptado a diferentes dimensiones de pantalla.
 
+
+![Where in the world](https://raw.githubusercontent.com/JoseCortezz25/where-in-the-world-app/master/screenshot.png)
+
+
 ## Tecnologías
 
 - Angular
